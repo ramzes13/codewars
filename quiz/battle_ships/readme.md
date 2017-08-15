@@ -1,0 +1,1 @@
+https://www.codewars.com/kata/58d06bfbc43d20767e000074/train/javascript
