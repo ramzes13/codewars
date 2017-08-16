@@ -2,7 +2,7 @@ const Test = require('chai').assert;
 
 const damagedOrSunk = require('../../../quiz/battle_ships');
 
-describe('Some simple multiplications', function () {
+describe('battle ships', function () {
   it('battle_ship_1', function () {
     var board = [[0, 0, 1, 0],
     [0, 0, 1, 0],

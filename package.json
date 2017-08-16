@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha --recursive"
+    "test": "node_modules/mocha/bin/mocha --recursive"
   },
   "author": "",
   "license": "ISC",
