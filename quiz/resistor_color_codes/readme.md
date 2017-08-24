@@ -1,0 +1,1 @@
+https://www.codewars.com/kata/resistor-color-codes-part-2/train/javascript
