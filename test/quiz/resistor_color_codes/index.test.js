@@ -4,7 +4,7 @@ const encodeResistorColors = require('../../../quiz/resistor_color_codes');
 
 describe('resistor_color_codes', function () {
   it('resistor_color_codes1', function () {
-    Test.equal(encodeResistorColors("10 ohms"), "brown black black gold")
+    Test.equal(encodeResistorColors("10 oshms"), "brown black black gold")
     Test.equal(encodeResistorColors("47 ohms"), "yellow violet black gold")
     Test.equal(encodeResistorColors("100 ohms"), "brown black brown gold")
     Test.equal(encodeResistorColors("220 ohms"), "red red brown gold")
@@ -19,6 +19,7 @@ describe('resistor_color_codes', function () {
     Test.equal(encodeResistorColors("100k ohms"), "brown black yellow gold")
     Test.equal(encodeResistorColors("330k ohms"), "orange orange yellow gold")
     Test.equal(encodeResistorColors("1M ohms"), "brown black green gold")
-    // Test.equal(encodeResistorColors("2M ohms"), "red black green gold")
+    Test.equal(encodeResistorColors("2M ohms"), "red black green gold")
+    Test.equal(encodeResistorColors("4.1M ohms"), "yellow brown green gold")
   })
 })
