@@ -16,6 +16,15 @@ const ensureDirectoryExistence = (filePath) => {
     ensureDirectoryExistence(dirname);
     fs.mkdirSync(dirname);
 }
+
+const createFile = (fileName, content = '') => {
+    if (!fs.existsSync(fileName)) {
+        fs.writeFileSync(fileName, content);
+    } else {
+        console.error(`File: ${fileName} exist`);
+    }
+}
+
 const name = generateSlug(process.argv.slice(2).pop())
 const baseQuizPath = `quiz${path.sep}${name}`;
 const quizPathFolder = `${baseQuizPath}${path.sep}`;
@@ -32,6 +41,7 @@ module.exports = fnName;
 
 const testPattern = `
 const Test = require('chai').assert;
+Test.assertEquals = Test.equal;
 
 const fnName = require('..${path.sep}..${path.sep}..${path.sep}${baseQuizPath}');
 
@@ -45,6 +55,6 @@ describe('${name}', () => {
 
 ensureDirectoryExistence(fullIndexName);
 ensureDirectoryExistence(fullTestIndex);
-fs.writeFileSync(fullIndexName, indexPattern);
-fs.writeFileSync(fullReadmeName, '');
-fs.writeFileSync(fullTestIndex, testPattern); 
+createFile(fullIndexName, indexPattern);
+createFile(fullReadmeName);
+createFile(fullTestIndex, testPattern);
