@@ -42,6 +42,7 @@ module.exports = fnName;
 const testPattern = `
 const Test = require('chai').assert;
 Test.assertEquals = Test.equal;
+Test.assertSimilar = Test.deepEqual;
 
 const fnName = require('..${path.sep}..${path.sep}..${path.sep}${baseQuizPath}');
 

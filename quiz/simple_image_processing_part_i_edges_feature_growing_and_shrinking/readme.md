@@ -1,0 +1,1 @@
+https://www.codewars.com/kata/simple-image-processing-part-i-edges-feature-growing-and-shrinking/train/javascript
